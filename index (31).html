@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pet Planet Hospital | 24/7 Veterinary Care in Karachi</title>
+<meta name="description" content="Pet Planet Hospital offers 24/7 veterinary care in Karachi: surgeries, spay & neuter, dental scaling, CBC testing, grooming and general care.">
+<link rel="icon" href="https://petplanethospital.com/wp-content/uploads/2025/10/Pet-Planet-Hospital-Logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06141b;--bg2:#0b1f29;--card:rgba(14,38,49,.62);--line:rgba(232,194,106,.22);--teal:#22d3bd;--gold:#e8c26a;--text:#e9f3f2;--mute:#9db5b6;--r:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+::selection{background:var(--teal);color:#042029}
+::-moz-selection{background:var(--teal);color:#042029}
+h1,h2,h3{font-family:'Fraunces',serif;line-height:1.15;font-weight:700}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+#bg3d{position:fixed;inset:0;z-index:-2;width:100%;height:100%}
+.veil{position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at 20% 0%,rgba(34,211,189,.14),transparent 55%),radial-gradient(ellipse at 90% 100%,rgba(232,194,106,.12),transparent 50%),linear-gradient(180deg,rgba(6,20,27,.55),rgba(6,20,27,.8))}
+/* intro */
+#intro{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;transition:opacity .9s .2s,visibility .9s .2s}
+#intro.done{opacity:0;visibility:hidden}
+.intro-box{text-align:center;perspective:900px}
+.intro-box img{height:150px;margin:0 auto 18px;animation:spin 2.4s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 0 30px rgba(34,211,189,.45))}
+.intro-box h2{font-size:1.6rem;letter-spacing:.2em;animation:fade 1.4s .6s both}
+.bar{width:220px;height:3px;background:rgba(255,255,255,.1);margin:18px auto 0;border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--gold));animation:load 2s .3s both}
+@keyframes spin{from{transform:rotateY(-540deg) scale(.3);opacity:0}to{transform:none;opacity:1}}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1}}
+@keyframes load{from{width:0}to{width:100%}}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding:12px 4vw;display:flex;align-items:center;justify-content:space-between;transition:.35s}
+header.scrolled{background:rgba(6,20,27,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:58px;width:auto}
+.brand b{font-family:'Fraunces',serif;font-size:1.15rem;line-height:1.1;letter-spacing:.04em}
+.brand small{display:block;color:var(--teal);font-size:.7rem;letter-spacing:.14em;font-family:'Manrope'}
+nav{display:flex;gap:6px;align-items:center}
+nav>a,.dd>a{padding:10px 16px;border-radius:30px;font-weight:500;font-size:.95rem;color:var(--mute);transition:.25s;display:block}
+nav>a:hover,.dd:hover>a,nav a.on{color:var(--text);background:rgba(34,211,189,.12)}
+.dd{position:relative}
+.menu{position:absolute;top:100%;left:0;min-width:250px;background:rgba(8,26,35,.97);border:1px solid var(--line);border-radius:18px;padding:10px;opacity:0;visibility:hidden;transform:translateY(10px) rotateX(-12deg);transform-origin:top;transition:.3s;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.dd:hover .menu,.dd:focus-within .menu{opacity:1;visibility:visible;transform:none}
+.menu a{display:block;padding:9px 14px;border-radius:12px;font-size:.92rem;color:var(--mute)}
+.menu a:hover{background:rgba(232,194,106,.12);color:var(--gold)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--text);width:46px;height:46px;border-radius:12px;font-size:1.3rem;cursor:pointer}
+.btn{display:inline-block;padding:15px 32px;border-radius:40px;font-weight:700;border:0;cursor:pointer;font-family:inherit;font-size:1rem;transition:.3s;background:linear-gradient(135deg,var(--teal),#14a897);color:#04222a;box-shadow:0 10px 30px rgba(34,211,189,.3)}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 40px rgba(34,211,189,.45)}
+.btn.gold{background:linear-gradient(135deg,var(--gold),#c9972f);box-shadow:0 10px 30px rgba(232,194,106,.28);color:#2a1d02}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line);box-shadow:none}
+/* layout */
+main{min-height:100vh}
+section{padding:110px 6vw;position:relative}
+.wrap{max-width:1200px;margin:0 auto}
+.tag{color:var(--gold);font-weight:700;font-size:.9rem;margin-bottom:10px}
+.title{font-size:clamp(2rem,4.2vw,3.2rem);margin-bottom:16px}
+.lead{color:var(--mute);max-width:620px}
+.center{text-align:center}.center .lead{margin:0 auto}
+.reveal{opacity:0;transform:translateY(50px) rotateX(10deg);transition:opacity .9s,transform .9s}
+.reveal.in{opacity:1;transform:none}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding-top:150px}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.6rem);margin-bottom:22px}
+.hero h1 span{background:linear-gradient(90deg,var(--teal),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mute);font-size:1.1rem;max-width:520px;margin-bottom:34px}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.hero-img{perspective:1200px}
+.hero-img .frame{border-radius:36px 120px 36px 120px;overflow:hidden;border:1px solid var(--line);box-shadow:0 50px 90px rgba(0,0,0,.55),0 0 0 14px rgba(34,211,189,.06);transform:rotateY(-12deg) rotateX(4deg);transition:transform .2s;aspect-ratio:4/4.4}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:60px}
+.stat{padding:22px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);backdrop-filter:blur(8px)}
+.stat b{font-family:'Fraunces';font-size:2rem;color:var(--gold);display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;margin-top:50px;perspective:1200px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;backdrop-filter:blur(10px);transition:transform .25s,border-color .3s,box-shadow .3s;transform-style:preserve-3d;display:flex;flex-direction:column}
+.card:hover{border-color:var(--teal);box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.card .im{height:210px;overflow:hidden;background:linear-gradient(135deg,#0f3a46,#164e57)}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.card:hover .im img{transform:scale(1.1)}
+.card .bd{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:1.3rem}
+.card p{color:var(--mute);font-size:.95rem;flex:1}
+.card .more{color:var(--teal);font-weight:700;font-size:.95rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.split img{border-radius:var(--r);border:1px solid var(--line);box-shadow:0 40px 80px rgba(0,0,0,.5);width:100%;aspect-ratio:4/3.4;object-fit:cover}
+.ticks{list-style:none;margin:20px 0 28px}
+.ticks li{padding:8px 0 8px 34px;position:relative;color:var(--mute)}
+.ticks li:before{content:"✓";position:absolute;left:0;top:8px;width:23px;height:23px;border-radius:50%;background:rgba(34,211,189,.16);color:var(--teal);display:grid;place-items:center;font-size:.8rem;font-weight:700}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:50px}
+.why div{padding:30px;border-radius:var(--r);background:var(--card);border:1px solid var(--line)}
+.why i{font-style:normal;font-size:2rem;display:block;margin-bottom:10px}
+.why h3{font-size:1.15rem;margin-bottom:6px}.why p{color:var(--mute);font-size:.93rem}
+.rev{padding:28px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.rev .st{color:var(--gold);letter-spacing:3px}
+.rev p{color:var(--text);font-size:.97rem}
+.rev .who{display:flex;gap:12px;align-items:center;color:var(--mute);font-size:.88rem}
+.rev .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--gold));display:grid;place-items:center;color:#04222a;font-weight:800}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 26px;margin-bottom:14px}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary:after{content:"+";color:var(--gold);font-size:1.4rem;line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--mute);margin-top:12px}
+.cta{text-align:center;padding:70px 30px;border-radius:40px;background:linear-gradient(135deg,rgba(34,211,189,.2),rgba(232,194,106,.16));border:1px solid var(--line)}
+.page-hero{padding-top:170px;padding-bottom:70px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.page-hero.solo{display:block;text-align:center}.page-hero.solo .lead{margin:0 auto}
+.page-hero h1{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:18px}
+.page-hero img{border-radius:var(--r) 90px var(--r) 90px;border:1px solid var(--line);width:100%;aspect-ratio:4/3.3;object-fit:cover;box-shadow:0 40px 80px rgba(0,0,0,.5)}
+.crumb{color:var(--mute);font-size:.9rem;margin-bottom:12px}.crumb a{color:var(--teal)}
+.gal{columns:3 260px;column-gap:18px;margin-top:40px}
+.gal figure{margin-bottom:18px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);position:relative;break-inside:avoid}
+.gal img{width:100%;transition:transform .7s}.gal figure:hover img{transform:scale(1.08)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.8));font-weight:700}
+form{display:grid;gap:14px}
+input,textarea,select{width:100%;padding:15px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(6,20,27,.7);color:var(--text);font:inherit}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--teal)}
+.branch{padding:26px;border-radius:var(--r);background:var(--card);border:1px solid var(--line)}
+.branch h3{font-size:1.15rem;margin-bottom:8px}.branch p{color:var(--mute);font-size:.95rem}.branch a{color:var(--teal);font-weight:700}
+.post{max-width:820px;margin:0 auto}
+.post .cover{width:100%;border-radius:var(--r);border:1px solid var(--line);margin-bottom:34px;box-shadow:0 40px 80px rgba(0,0,0,.5);aspect-ratio:16/9;object-fit:cover}
+.post h2{font-size:clamp(1.5rem,3vw,2rem);margin:44px 0 14px}
+.post h3{font-size:1.2rem;margin:26px 0 8px;color:var(--gold)}
+.post p{color:var(--mute);margin-bottom:16px}
+.post a.kw{color:var(--teal);font-weight:700;border-bottom:1px solid var(--teal)}
+.post .ticks{margin:14px 0 22px}
+.blogcard{display:grid;grid-template-columns:1fr 1.1fr;gap:0;align-items:stretch;text-decoration:none}
+.blogcard .im{height:100%;min-height:240px}
+@media(max-width:960px){.blogcard{grid-template-columns:1fr}}
+/* footer */
+footer{background:rgba(4,13,18,.92);border-top:1px solid var(--line);padding:70px 6vw 28px}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1.4fr;gap:50px;max-width:1200px;margin:0 auto}
+footer h4{font-family:'Fraunces';color:var(--gold);margin-bottom:16px;font-size:1.1rem}
+footer li{list-style:none;padding:4px 0;color:var(--mute);font-size:.93rem}
+footer li:hover a{color:var(--teal)}
+footer .logo{height:110px;margin-bottom:12px}
+.copy{text-align:center;color:var(--mute);font-size:.85rem;margin-top:44px;padding-top:22px;border-top:1px solid var(--line)}
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#c9972f);display:grid;place-items:center;font-size:1.6rem;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+@media(max-width:960px){
+.burger{display:block}
+nav{position:fixed;top:0;right:-100%;height:100vh;width:min(86vw,340px);background:#071a23;flex-direction:column;align-items:stretch;padding:90px 20px 20px;transition:.4s;overflow:auto;border-left:1px solid var(--line)}
+nav.open{right:0}
+.menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;background:transparent;padding:0 0 0 12px}
+.hero,.split,.page-hero,.fg{grid-template-columns:1fr}
+.stats{grid-template-columns:1fr 1fr}
+.hero-img .frame{transform:none}
+section{padding:80px 6vw}
+.brand b{font-size:1rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition-duration:.01s!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="bg3d"></canvas><div class="veil"></div>
+
+<div id="intro"><div class="intro-box">
+  <img src="https://petplanethospital.com/wp-content/uploads/2025/10/Pet-Planet-Hospital-Logo.svg" alt="Pet Planet Hospital logo">
+  <h2>PET PLANET HOSPITAL</h2><div class="bar"><i></i></div>
+</div></div>
+
+<header id="hd">
+  <a href="#/" class="brand" aria-label="Pet Planet Hospital home">
+    <img src="https://petplanethospital.com/wp-content/uploads/2025/10/Pet-Planet-Hospital-Logo.svg" alt="Pet Planet Hospital logo">
+    <span><b>PET PLANET<br>HOSPITAL</b></span>
+  </a>
+  <button class="burger" id="bg" aria-label="Open menu">☰</button>
+  <nav id="nav">
+    <a href="#/" data-p="home">Home</a>
+    <a href="#/about" data-p="about">About Us</a>
+    <div class="dd"><a href="#/services" data-p="service">Services ▾</a><div class="menu" id="smenu"></div></div>
+    <a href="#/contact" data-p="contact">Contact Us</a>
+    <a href="#/contact" class="btn" style="padding:11px 22px;color:#04222a">Book Visit</a>
+  </nav>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  <div class="fg">
+    <div>
+      <img class="logo" src="https://petplanethospital.com/wp-content/uploads/2025/10/Pet-Planet-Hospital-Logo.svg" alt="Pet Planet Hospital logo">
+      <p style="color:var(--mute);font-size:.93rem;max-width:340px">Professional, compassionate veterinary care for your pets in Karachi, open every hour of every day.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul><li><a href="#/">Home</a></li><li><a href="#/about">About Us</a></li><li><a href="#/services">Services</a></li><li><a href="#/gallery">Gallery</a></li><li><a href="#/blog">Blog</a></li><li><a href="#/contact">Contact</a></li></ul>
+    </div>
+    <div>
+      <h4>Contact Information</h4>
+      <ul>
+        <li>📍 North Nazimabad – F Block, Karachi</li>
+        <li>📍 Plot 4, Shaheed-e-Millat Road, Karachi</li>
+        <li>📍 Block 18, Gulistan-e-Johar, Karachi</li>
+        <li>📞 <a href="tel:+923064136427">+92 306 4136427</a></li>
+        <li>✉️ <a href="mailto:info@petplanethospital.com">info@petplanethospital.com</a></li>
+        <li>🕒 Working Hours: Open 24/7</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">© <span id="yr"></span> Pet Planet Hospital. All rights reserved. · <a href="https://petplanethospital.com/" target="_blank" rel="noopener" style="color:var(--teal)">petplanethospital.com</a></div>
+</footer>
+<a class="wa" href="tel:+923064136427" aria-label="Call now">📞</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const LOGO="https://petplanethospital.com/wp-content/uploads/2025/10/Pet-Planet-Hospital-Logo.svg";
+const S=[
+{s:"general-veterinary-care",t:"General Veterinary Care",d:"Check-ups, vaccinations, diagnosis and treatment for everyday pet health.",img:"https://avatars.mds.yandex.net/i?id=825e92f5f549939e5c70dbcac4730041fc5b781c-5248034-images-thumbs&n=13",p:["Full physical examinations","Vaccination and deworming","Diagnosis with CBC BC30 blood testing","Treatment plans for illness and injury","Senior and puppy/kitten care"],l:"Regular care keeps small problems from becoming big ones. Our vets examine your pet carefully, run the right tests, explain what they find in plain words, and set a treatment plan you can follow at home."},
+{s:"neuter-spay-surgery",t:"Neuter & Spay Surgery",d:"Safe, gentle sterilisation surgery with careful anaesthesia and aftercare.",img:"https://avatars.mds.yandex.net/i?id=b89ca4d6f751655507a16f95118781be7f5473cb-6974755-images-thumbs&n=13",p:["Pre-surgery health screening","Monitored anaesthesia","Sterile operating theatre","Pain relief and recovery guidance","Follow-up check after surgery"],l:"Neutering and spaying improves long-term health and behaviour and helps control the stray population. We screen every pet before surgery and monitor them closely until they are awake and comfortable."},
+{s:"pet-dental-care",t:"Pet Dental Care",d:"Gum and tooth checks that protect your pet's mouth, heart and comfort.",img:"https://avatars.mds.yandex.net/i?id=b662a1f28787165b3b1498fd20a78c2a1aea6d1c-6431583-images-thumbs&n=13",p:["Oral health examination","Treatment of gum disease","Bad breath assessment","Surgical dental procedures","Home dental care advice"],l:"Dental disease is painful and can affect organs. We examine teeth and gums, treat infections and, when needed, perform surgical dental procedures such as extractions under safe anaesthesia."},
+{s:"pet-grooming-services",t:"Pet Grooming Services",d:"Bathing, trimming and coat care for a clean, comfortable pet.",img:"https://avatars.mds.yandex.net/i?id=80ed746941a35751cb76418b20070cba6d6484ad-4219276-images-thumbs&n=13",p:["Bath and blow-dry","Haircuts and trimming","Nail clipping and ear cleaning","De-matting and coat care","Gentle handling of nervous pets"],l:"Grooming is part of health: it helps us spot skin problems, ticks and lumps early. Our groomers work patiently and calmly so every pet leaves fresh and relaxed."},
+{s:"dental-scaling",t:"Dental Scaling",d:"Professional removal of plaque and tartar for healthy teeth and gums.",img:"https://avatars.mds.yandex.net/i?id=d78c220c518f246ddfd981c2d2a32fbef2b86783-5171322-images-thumbs&n=13",p:["Ultrasonic tartar removal","Polishing for a smooth finish","Gum line cleaning","Fresher breath","Early detection of tooth problems"],l:"Scaling removes the hard tartar that brushing cannot. It reduces gum inflammation, freshens breath and slows tooth loss, helping your pet eat and play without pain."},
+{s:"surgeries",t:"Surgeries",d:"Soft tissue and general surgery performed with precision and close monitoring.",img:"https://avatars.mds.yandex.net/i?id=3716b3ab157847b29da47e487c3249b539bbb298-5577672-images-thumbs&n=13",p:["Soft tissue and wound surgery","Reproductive health procedures","Emergency surgery, 24/7","Anaesthesia monitoring","Post-operative care plans"],l:"From lump removal to emergency procedures, our surgical team plans each operation carefully, keeps your pet safe under anaesthesia and guides you through recovery."}
+];
+const B=[
+{n:"North Nazimabad",a:"F Block, North Nazimabad, Karachi",p:"+92 306 4136427"},
+{n:"Shaheed-e-Millat Road",a:"Plot No. 4, Shaheed-e-Millat Road, Karachi",p:"+92 306 4281045"},
+{n:"Gulistan-e-Johar",a:"Block 18, Gulistan-e-Johar, Karachi",p:"+92 306 4620137"}];
+const PH="+92 329 2306891";
+const R=[["Ayesha K.","My cat needed urgent surgery at midnight. The team was calm, kind and kept me updated the whole time."],["Hamza R.","Clean clinic and honest advice. The dental scaling made a huge difference to my dog's breath."],["Sana M.","Spay surgery went smoothly and the aftercare instructions were very clear. Highly recommended."],["Bilal A.","Grooming staff are patient with my nervous Persian. She came home happy and fluffy."],["Mariam S.","Open 24/7 is a lifesaver. Fast blood test results and a clear diagnosis for our puppy."],["Usman T.","Three branches means one is always close. Professional doctors and friendly reception."]];
+const F=[["Are you really open 24/7?","Yes. All our Karachi branches are open every hour of every day for check-ups and emergencies."],["Which pets do you treat?","We treat dogs and cats, and can advise on other small pets. Call ahead for unusual species."],["Do I need an appointment?","Walk-ins are welcome. Booking ahead for surgery, grooming or dental scaling saves you waiting time."],["What is CBC BC30 testing?","A complete blood count run on our analyser. It helps our vets check infection, anaemia and overall health quickly."],["Is anaesthesia safe for my pet?","We screen every pet beforehand and monitor them throughout, which keeps risk as low as possible."]];
+const WHY=[["🩺","Accurate diagnosis","In-house CBC BC30 testing gives fast, clear results."],["🕒","Open 24/7","Emergency help whenever your pet needs it."],["🏥","Three branches","North Nazimabad, Shaheed-e-Millat Road and Gulistan-e-Johar."],["💚","Compassionate team","Gentle handling that keeps pets and owners calm."],["🛡️","Safe treatment","Sterile theatre, monitored anaesthesia and clear aftercare."],["🐾","Complete care","Surgery, dental, grooming and general care under one roof."]];
+const $=s=>document.querySelector(s);
+const img=(u,a)=>`<img src="${u}" alt="${a}" loading="lazy" onerror="this.style.display='none'">`;
+const card=x=>`<a class="card tilt reveal" href="#/service/${x.s}"><div class="im">${img(x.img,x.t)}</div><div class="bd"><h3>${x.t}</h3><p>${x.d}</p><span class="more">Learn more →</span></div></a>`;
+const revs=()=>R.map(r=>`<div class="rev reveal"><div class="st">★★★★★</div><p>“${r[1]}”</p><div class="who"><span class="av">${r[0][0]}</span>${r[0]}</div></div>`).join('');
+const faqs=()=>F.map(f=>`<details class="reveal"><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('');
+const why=()=>WHY.map(w=>`<div class="reveal"><i>${w[0]}</i><h3>${w[1]}</h3><p>${w[2]}</p></div>`).join('');
+const cta=()=>`<section><div class="wrap"><div class="cta reveal"><h2 class="title">Your pet needs care right now?</h2><p class="lead" style="margin:0 auto 26px">Call us any time, day or night, or send us a message.</p><div class="row" style="justify-content:center"><a class="btn" href="tel:+923064136427">Call +92 306 4136427</a><a class="btn gold" href="#/contact">Contact Us</a></div></div></div></section>`;
+
+const P={
+home:()=>`
+<section class="hero"><div><p class="tag">24/7 veterinary hospital · Karachi</p>
+<h1>Luxury care for the <span>pets you love</span></h1>
+<p>Surgery, dental care, grooming and diagnostics from a caring team who treat every pet like family, day and night.</p>
+<div class="row"><a class="btn" href="#/services">Explore Services</a><a class="btn ghost" href="#/contact">Book a Visit</a></div></div>
+<div class="hero-img"><div class="frame" id="hf">${img(S[0].img,'Veterinarian caring for a pet')}</div></div></section>
+<section style="padding-top:20px"><div class="wrap"><div class="stats">
+<div class="stat reveal"><b>24/7</b>Always open</div><div class="stat reveal"><b>3</b>Karachi branches</div><div class="stat reveal"><b>6</b>Core services</div><div class="stat reveal"><b>BC30</b>In-house blood tests</div></div></div></section>
+<section><div class="wrap"><div class="center reveal"><p class="tag">What we do</p><h2 class="title">Our Services</h2><p class="lead">Every service has its own page with details on what to expect.</p></div>
+<div class="grid">${S.map(card).join('')}</div>
+<div class="center reveal" style="margin-top:44px"><a class="btn gold" href="#/services">Explore Services</a></div></div></section>
+<section><div class="wrap split"><div class="reveal">${img(S[5].img,'Surgery at Pet Planet Hospital')}</div><div class="reveal"><p class="tag">About us</p><h2 class="title">Care built on diagnosis, safety and kindness</h2><p class="lead">Pet Planet Hospital serves Karachi from three locations. We focus on proper diagnosis, safe treatment and compassionate attention at every stage of your pet's life.</p><ul class="ticks"><li>Experienced, caring veterinary team</li><li>Modern diagnostics and sterile theatres</li><li>Clear advice, honest costs</li></ul><a class="btn" href="#/about">Read Our Story</a></div></div></section>
+<section><div class="wrap"><div class="center reveal"><p class="tag">Why choose us</p><h2 class="title">Why Pet Planet Hospital</h2></div><div class="why">${why()}</div></div></section>
+<section><div class="wrap"><div class="center reveal"><p class="tag">Customer reviews</p><h2 class="title">Pet parents talk about us</h2></div><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(290px,1fr))">${revs()}</div></div></section>
+<section><div class="wrap" style="max-width:820px"><div class="center reveal"><p class="tag">FAQs</p><h2 class="title">Quick answers</h2></div><div style="margin-top:40px">${faqs()}</div></div></section>
+<section><div class="wrap"><div class="center reveal"><p class="tag">From our blog</p><h2 class="title">Latest article</h2></div><div class="grid" style="grid-template-columns:1fr"><a class="card blogcard reveal" href="#/blog"><div class="im"><img src="https://uploads.wefunder.com/uploads/image_upload/file/1431538/image.png" alt="Diagnostic services in Karachi" loading="lazy" onerror="this.style.display='none'"></div><div class="bd" style="justify-content:center"><h3>Diagnostic Services in Karachi, PK: Understanding the Importance of Accurate Medical Testing and Laboratory Care</h3><p>Why accurate testing matters, which tests are common, and how to choose a dependable diagnostic centre.</p><span class="more">Read article →</span></div></a></div></div></section>
+${cta()}`,
+
+services:()=>`<section class="page-hero solo"><p class="crumb"><a href="#/">Home</a> / Services</p><h1>Our Services</h1><p class="lead">Complete medical, surgical, dental and grooming care for your pet.</p></section>
+<section style="padding-top:0"><div class="wrap"><div class="grid">${S.map(card).join('')}</div></div></section>${cta()}`,
+
+service:s=>{const x=S.find(a=>a.s===s)||S[0];const o=S.filter(a=>a!==x);return `
+<section class="page-hero"><div><p class="crumb"><a href="#/">Home</a> / <a href="#/services">Services</a> / ${x.t}</p><h1>${x.t}</h1><p class="lead">${x.d}</p><div class="row" style="margin-top:26px"><a class="btn" href="#/contact">Book This Service</a><a class="btn ghost" href="tel:+923064136427">Call Now</a></div></div><div>${img(x.img,x.t)}</div></section>
+<section style="padding-top:20px"><div class="wrap split"><div class="reveal"><h2 class="title">About this service</h2><p class="lead">${x.l}</p></div><div class="reveal"><h3 style="margin-bottom:8px">What is included</h3><ul class="ticks">${x.p.map(i=>`<li>${i}</li>`).join('')}</ul></div></div></section>
+<section style="padding-top:20px"><div class="wrap"><h2 class="title reveal">Other services</h2><div class="grid">${o.slice(0,3).map(card).join('')}</div></div></section>${cta()}`},
+
+about:()=>`<section class="page-hero"><div><p class="crumb"><a href="#/">Home</a> / About Us</p><h1>About Pet Planet Hospital</h1><p class="lead">A 24/7 veterinary hospital in Karachi that treats every pet with skill, safety and compassion.</p></div><div>${img(S[0].img,'Pet Planet Hospital team')}</div></section>
+<section style="padding-top:20px"><div class="wrap split"><div class="reveal"><h2 class="title">Our mission</h2><p class="lead">To give pets in Karachi the quality medical care they deserve: proper diagnosis, safe treatment and gentle attention, from their first vaccine to their senior years.</p><ul class="ticks"><li>Surgery, neutering and spaying, reproductive health care</li><li>Dental scaling and surgical dental procedures</li><li>CBC BC30 testing, grooming and general care</li></ul></div><div class="reveal">${img(S[1].img,'Surgery room')}</div></div></section>
+<section><div class="wrap"><div class="center reveal"><h2 class="title">Our locations</h2></div><div class="grid">${B.map(b=>`<div class="branch reveal"><h3>${b.n}</h3><p>${b.a}</p><p><a href="tel:${b.p.replace(/ /g,'')}">${b.p}</a></p></div>`).join('')}</div></div></section>${cta()}`,
+
+blog:()=>`<section class="page-hero solo"><p class="crumb"><a href="#/">Home</a> / Blog</p><h1 style="max-width:980px;margin-left:auto;margin-right:auto">Diagnostic Services in Karachi, PK: Understanding the Importance of Accurate Medical Testing and Laboratory Care</h1></section>
+<section style="padding-top:0"><article class="post">
+<img class="cover" src="https://uploads.wefunder.com/uploads/image_upload/file/1431538/image.png" alt="Diagnostic services and laboratory testing in Karachi" onerror="this.style.display='none'">
+<h2>Introduction</h2>
+<p>Access to reliable healthcare begins with accurate diagnosis. Whether someone needs a routine blood test, a general health screening, or specialized medical investigations, diagnostic facilities play an important role in identifying health conditions and supporting effective treatment. In a busy metropolitan city like Karachi, Pakistan, people increasingly rely on professional diagnostic centres to monitor their health and receive timely medical information.</p>
+<p><a class="kw" href="https://petplanethospital.com/" target="_blank" rel="noopener">Diagnostic services in Karachi, PK</a> help doctors understand what is happening inside the human body through laboratory investigations, imaging procedures, and other medical assessments. With growing awareness of preventive healthcare, choosing a dependable diagnostic facility has become an important consideration for individuals and families. Quality testing, experienced laboratory staff, modern equipment, and accurate reporting all contribute to a better healthcare experience.</p>
+<h2>Understanding the Importance of Diagnostic Services in Karachi, PK</h2>
+<p>Diagnostic services are an essential part of modern healthcare because they help identify diseases, evaluate existing medical conditions, and monitor treatment progress. Doctors often require laboratory results before recommending medication, performing medical procedures, or developing an appropriate treatment plan.</p>
+<p>Karachi has a diverse population with different healthcare requirements. From children and young adults to senior citizens, people need access to medical testing for various reasons. Routine investigations can help identify potential health concerns before noticeable symptoms develop.</p>
+<p>Professional diagnostic centres offer several benefits, including:</p>
+<ul class="ticks"><li>Early identification of possible health conditions.</li><li>Accurate information to support medical decisions.</li><li>Regular monitoring of chronic illnesses.</li><li>Assessment of general health and nutritional status.</li><li>Assistance in evaluating treatment effectiveness.</li><li>Convenient access to essential medical investigations.</li></ul>
+<p>By making diagnostic testing part of regular healthcare, individuals can take a more informed approach to maintaining their well-being.</p>
+<h2>How Laboratory Services in Karachi, PK Support Better Healthcare</h2>
+<p>Laboratory testing provides valuable information that helps healthcare professionals assess different aspects of a patient's health. Blood, urine, stool, and other biological samples are examined using specialized equipment and established testing procedures.</p>
+<p>Access to dependable Laboratory Services in Karachi, PK allows patients to undergo essential investigations without unnecessary delays. These services support doctors in identifying infections, evaluating organ function, checking blood components, and assessing several other health indicators.</p>
+<p>Common laboratory investigations include:</p>
+<h3>Complete Blood Count (CBC)</h3>
+<p>A Complete Blood Count measures different components of blood, including red blood cells, white blood cells, haemoglobin, and platelets. Doctors commonly recommend this test when investigating anaemia, infections, and other blood-related conditions.</p>
+<h3>Blood Sugar Testing</h3>
+<p>Blood glucose tests help evaluate sugar levels in the body. Fasting blood sugar, random blood sugar, and HbA1c tests are commonly used to assess and monitor diabetes.</p>
+<h3>Liver Function Tests</h3>
+<p>Liver function tests measure specific enzymes, proteins, and other substances that provide information about liver health. These investigations may help doctors evaluate possible liver-related problems.</p>
+<h3>Kidney Function Tests</h3>
+<p>Kidney function investigations commonly include creatinine, urea, and estimated glomerular filtration rate (eGFR). These tests help assess how effectively the kidneys are filtering waste products.</p>
+<h3>Thyroid Function Tests</h3>
+<p>Thyroid investigations, including TSH, T3, and T4, help evaluate thyroid hormone levels. They are useful when assessing symptoms associated with an underactive or overactive thyroid.</p>
+<h3>Urine and Stool Analysis</h3>
+<p>Urine and stool examinations can provide useful information about infections, digestive concerns, urinary conditions, and other medical issues.</p>
+<h2>Different Types of Diagnostic Testing Available</h2>
+<p>Diagnostic facilities provide several categories of medical investigations to meet different patient requirements. The recommended test depends on symptoms, medical history, age, and the doctor's assessment.</p>
+<h3>1. Haematology Testing</h3>
+<p>Haematology focuses on blood-related investigations. It includes CBC, haemoglobin testing, platelet counts, and other assessments that help evaluate blood health.</p>
+<h3>2. Clinical Chemistry</h3>
+<p>Clinical chemistry involves analysing blood and other samples to measure substances such as glucose, cholesterol, enzymes, electrolytes, and proteins. These results help doctors evaluate metabolic processes and organ function.</p>
+<h3>3. Microbiology Testing</h3>
+<p>Microbiology investigations help identify microorganisms responsible for certain infections. Depending on the clinical requirement, testing may involve bacterial cultures and sensitivity assessments.</p>
+<h3>4. Immunology and Serology</h3>
+<p>These investigations evaluate immune responses and detect specific antibodies or antigens. They may be recommended when assessing certain infectious or immune-related conditions.</p>
+<h3>5. Hormonal Investigations</h3>
+<p>Hormonal tests measure substances produced by different glands in the body. They can help investigate thyroid disorders, reproductive health concerns, and other hormonal imbalances.</p>
+<h2>The Role of Modern Technology in Medical Diagnostics</h2>
+<p>Technology has significantly improved the way diagnostic laboratories process samples and deliver results. Modern laboratory equipment can support consistent testing procedures, improve efficiency, and reduce certain types of manual errors.</p>
+<p>Automated analysers are commonly used for blood counts, biochemical investigations, and other routine laboratory procedures. Digital reporting systems also make it easier to organise patient information and provide test results in a readable format.</p>
+<p>However, technology alone does not guarantee reliable results. Qualified laboratory professionals, proper sample handling, equipment maintenance, quality control, and validated testing methods are equally important.</p>
+<p>A well-managed diagnostic facility combines trained personnel with suitable technology to maintain dependable laboratory standards.</p>
+<h2>Choosing the Right Diagnostic Centre in Karachi</h2>
+<p>Selecting a diagnostic centre requires more consideration than simply comparing prices or choosing the nearest location. Patients should look for facilities that follow appropriate laboratory practices and provide clear information about their testing procedures.</p>
+<p>Here are some important factors to consider:</p>
+<h3>Qualified Laboratory Professionals</h3>
+<p>Experienced laboratory technologists and qualified pathologists contribute to proper sample analysis and result interpretation. Patients should consider facilities with trained professionals and appropriate supervision.</p>
+<h3>Modern Testing Equipment</h3>
+<p>Updated laboratory equipment can improve processing efficiency and support consistent analytical performance. Regular calibration and maintenance are also important.</p>
+<h3>Quality Control Procedures</h3>
+<p>Reliable laboratories follow internal quality control procedures and may participate in external quality assessment programmes. These practices help monitor testing accuracy and consistency.</p>
+<h3>Timely Reporting</h3>
+<p>Receiving reports within a reasonable timeframe can help patients proceed with medical consultations and treatment decisions. Reporting times may vary depending on the type of investigation.</p>
+<h3>Clear Communication</h3>
+<p>A professional diagnostic centre should provide understandable instructions about sample collection, fasting requirements, preparation, and report collection.</p>
+<h3>Hygiene and Sample Safety</h3>
+<p>Clean collection areas, proper sample labelling, and safe handling procedures are essential for protecting patients and maintaining sample integrity.</p>
+<h2>Why Routine Health Screenings Matter</h2>
+<p>Many health conditions develop gradually and may not produce noticeable symptoms during their early stages. Routine health screenings can help identify certain risk factors and provide useful information about a person's overall health.</p>
+<p>Depending on age, family history, lifestyle, and medical requirements, doctors may recommend regular blood sugar testing, cholesterol assessments, blood pressure monitoring, or other investigations.</p>
+<p>Preventive testing is particularly useful for people who have a family history of diabetes, cardiovascular conditions, or other long-term illnesses. However, not every individual needs the same collection of tests. Screening recommendations should be based on professional medical advice rather than unnecessary testing.</p>
+<p>Regular medical check-ups also give patients an opportunity to discuss changes in their health and understand whether additional investigations are required.</p>
+<h2>Preparing for a Diagnostic Test</h2>
+<p>Proper preparation can help patients avoid delays and reduce the possibility of inaccurate results. Different investigations have different preparation requirements, so it is important to follow the instructions provided by the healthcare professional or laboratory.</p>
+<p>Some general recommendations include:</p>
+<ul class="ticks"><li>Confirm whether fasting is required before the test.</li><li>Drink water according to the laboratory's instructions.</li><li>Inform the staff about current medications and supplements.</li><li>Follow the recommended sample collection procedure.</li><li>Provide accurate personal and medical information.</li><li>Ask when and how the results will be available.</li></ul>
+<p>Patients should not discontinue prescribed medication unless their doctor specifically advises them to do so.</p>
+<h2>Understanding Diagnostic Reports and Medical Results</h2>
+<p>Receiving a laboratory report is only one part of the diagnostic process. Understanding what the results mean is equally important. Reports generally include measured values, units, and reference ranges that indicate typical values for the relevant testing method.</p>
+<p>A result outside the reference range does not automatically confirm a medical condition. Similarly, a result within the reference range does not always rule out an underlying health concern.</p>
+<p>Doctors consider laboratory findings alongside symptoms, physical examinations, medical history, and other investigations before reaching a conclusion.</p>
+<p>Patients should avoid self-diagnosis or changing prescribed treatment based on individual test values. Consulting a qualified healthcare professional helps ensure that results are interpreted correctly.</p>
+<h2>The Growing Need for Accessible Diagnostic Healthcare in Karachi</h2>
+<p>As Karachi continues to expand, the demand for accessible healthcare facilities is also increasing. Busy schedules, changing lifestyles, environmental factors, and rising awareness of preventive healthcare have encouraged more people to seek regular medical assessments.</p>
+<p>Convenient diagnostic facilities can help individuals save time and access important investigations when needed. Clear communication, organised sample collection, dependable reporting, and professional support all contribute to a better patient experience.</p>
+<p>Healthcare providers and diagnostic laboratories also have an important responsibility to maintain patient confidentiality and protect medical information. Proper record management and responsible handling of reports help build trust between patients and healthcare professionals.</p>
+<h2>Conclusion</h2>
+<p>Accurate medical diagnosis is an important foundation of effective healthcare. From routine blood investigations to specialized <a class="kw" href="https://petplanethospital.com/" target="_blank" rel="noopener">laboratory services in Karachi, PK</a>, diagnostic services provide valuable information that supports doctors in identifying health concerns and monitoring treatment progress.</p>
+<p>When selecting a diagnostic centre in Karachi, patients should consider professional expertise, testing facilities, quality control, hygiene standards, and reporting procedures. Regular health assessments, when recommended by a qualified doctor, can also help individuals stay informed about their health.</p>
+<p>Choosing dependable diagnostic care is not simply about obtaining a medical report; it is about receiving reliable information that supports better healthcare decisions and long-term well-being.</p>
+</article></section>${cta()}`,
+
+gallery:()=>`<section class="page-hero solo"><p class="crumb"><a href="#/">Home</a> / Gallery</p><h1>Gallery</h1><p class="lead">A look at the care we provide every day.</p></section>
+<section style="padding-top:0"><div class="wrap"><div class="gal">${S.map(x=>`<figure class="reveal">${img(x.img,x.t)}<figcaption>${x.t}</figcaption></figure>`).join('')}</div></div></section>${cta()}`,
+
+contact:()=>`<section class="page-hero solo"><p class="crumb"><a href="#/">Home</a> / Contact Us</p><h1>Contact Us</h1><p class="lead">We are open 24/7. Call, email or send a message and we will reply quickly.</p></section>
+<section style="padding-top:0"><div class="wrap split" style="align-items:start"><div class="reveal">
+<form onsubmit="return sendMsg(event)"><input id="fn" placeholder="Your name" required><input id="fp" placeholder="Phone number" required><select id="fs">${S.map(x=>`<option>${x.t}</option>`).join('')}</select><textarea id="fm" rows="5" placeholder="How can we help?" required></textarea><button class="btn" type="submit">Send Message</button></form></div>
+<div class="reveal" style="display:grid;gap:16px">${B.map(b=>`<div class="branch"><h3>${b.n}</h3><p>${b.a}</p><p><a href="tel:${b.p.replace(/ /g,'')}">${b.p}</a></p></div>`).join('')}
+<div class="branch"><h3>Email and hours</h3><p><a href="mailto:info@petplanethospital.com">info@petplanethospital.com</a></p><p>Open 24/7 · <a href="tel:${PH.replace(/ /g,'')}">${PH}</a></p></div></div></div></section>`
+};
+function sendMsg(e){e.preventDefault();const b=`Name: ${$('#fn').value}%0APhone: ${$('#fp').value}%0AService: ${$('#fs').value}%0A${encodeURIComponent($('#fm').value)}`;location.href=`mailto:info@petplanethospital.com?subject=Enquiry from website&body=${b}`;return false}
+
+$('#smenu').innerHTML=S.map(x=>`<a href="#/service/${x.s}">${x.t}</a>`).join('');
+$('#yr').textContent=new Date().getFullYear();
+let io;
+function route(){
+  const h=location.hash.replace(/^#\/?/,'').split('/');const pg=h[0]||'home';
+  const f=pg==='service'?()=>P.service(h[1]):(P[pg]||P.home);
+  $('#app').innerHTML=f();
+  window.scrollTo(0,0);$('#nav').classList.remove('open');
+  document.querySelectorAll('nav [data-p]').forEach(a=>a.classList.toggle('on',a.dataset.p===(P[pg]?pg:'home')));
+  const t=S.find(a=>a.s===h[1]);
+  document.title=(pg==='service'&&t?t.t:pg==='home'?'Veterinary Care in Karachi':pg[0].toUpperCase()+pg.slice(1))+' | Pet Planet Hospital';
+  if(io)io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.querySelectorAll('.tilt').forEach(c=>{
+    c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`rotateY(${x*12}deg) rotateX(${-y*12}deg) translateZ(10px)`});
+    c.addEventListener('mouseleave',()=>c.style.transform='');
+  });
+}
+addEventListener('hashchange',route);route();
+$('#bg').onclick=()=>$('#nav').classList.toggle('open');
+addEventListener('scroll',()=>$('#hd').classList.toggle('scrolled',scrollY>30),{passive:true});
+setTimeout(()=>$('#intro').classList.add('done'),2600);
+
+/* 3D scroll background */
+(function(){
+  if(typeof THREE==='undefined')return;
+  const cv=$('#bg3d'),r=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+  r.setPixelRatio(Math.min(devicePixelRatio,2));
+  const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(60,1,.1,200);cam.position.z=12;
+  const g=new THREE.Group();sc.add(g);
+  const mt=new THREE.MeshBasicMaterial({color:0x22d3bd,wireframe:true,transparent:true,opacity:.35});
+  const mg=new THREE.MeshBasicMaterial({color:0xe8c26a,wireframe:true,transparent:true,opacity:.3});
+  const geos=[new THREE.TorusGeometry(1,.35,12,32),new THREE.IcosahedronGeometry(1,0),new THREE.OctahedronGeometry(1,0),new THREE.TorusKnotGeometry(.7,.2,64,8)];
+  const items=[];
+  for(let i=0;i<34;i++){
+    const m=new THREE.Mesh(geos[i%4],i%3?mt:mg);
+    m.position.set((Math.random()-.5)*34,-Math.random()*70+6,(Math.random()-.5)*24-4);
+    const s=.5+Math.random()*1.4;m.scale.set(s,s,s);
+    m.userData={rx:Math.random()*.01,ry:Math.random()*.01};g.add(m);items.push(m);
+  }
+  const N=900,pos=new Float32Array(N*3);
+  for(let i=0;i<N;i++){pos[i*3]=(Math.random()-.5)*60;pos[i*3+1]=-Math.random()*80+10;pos[i*3+2]=(Math.random()-.5)*40-6}
+  const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  g.add(new THREE.Points(pg,new THREE.PointsMaterial({color:0xcff7f1,size:.07,transparent:true,opacity:.7})));
+  function size(){r.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}
+  size();addEventListener('resize',size);
+  let mx=0,my=0;addEventListener('mousemove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+  const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  (function loop(){
+    const max=Math.max(1,document.body.scrollHeight-innerHeight),p=scrollY/max;
+    cam.position.y+=((-p*60)-cam.position.y)*.06;
+    cam.position.x+=((mx*3)-cam.position.x)*.04;
+    cam.position.z=12-Math.sin(p*Math.PI)*4;
+    cam.rotation.z=p*Math.PI*.6;cam.rotation.x=-my*.1;
+    if(!still)items.forEach(m=>{m.rotation.x+=m.userData.rx;m.rotation.y+=m.userData.ry});
+    r.render(sc,cam);requestAnimationFrame(loop);
+  })();
+})();
+</script>
+</body>
+</html>
